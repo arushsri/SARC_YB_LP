@@ -1,9 +1,9 @@
 
-  .form-container {
+.form-container {
     background-color:black;
     padding: 20px;
     border-radius: 10px;
-    box-shadow:0 4px 8px rgb(155,82,227);
+    box-shadow:0 4px 8px rgb(155,82,227) ,0 -4px 8px  rgb(155,82,227) ;
     max-width: 700px;
     box-sizing: border-box;
     margin: 15px;
@@ -138,4 +138,9 @@
     background-color: #4CAF50;
     color: white;
   }
-  
+  .required::after {
+    content: '*';
+    color: red;
+    margin-left: 5px;
+    position: absolute;
+  }

@@ -1,24 +1,20 @@
 import React, { useState, useContext, useEffect } from 'react'
 import axios from 'axios'
 import SearchContext from '../Contexts/SearchContext'
-// import './Searchbar.css'
 import '../FormInputs.css'
 
-
 export default function Searchbar() {
-    
-    const [input, setInput] = useState("");
     const list = useContext(SearchContext);
 
     useEffect(() => {
         const delayDebounceFn = setTimeout(() => {
-          if (input) {
+          if (list.input) {
             axios
               .post('https://yearbook.sarc-iitb.org/api/search/search/', {
                 query: {
                   multi_match: {
                     fields: ['name', 'hostel', 'department', 'degree', 'program'],
-                    query: input,
+                    query: list.input,
                     fuzziness: 'AUTO',
                     type: 'best_fields',
                   },
@@ -46,10 +42,10 @@ export default function Searchbar() {
         //matlb yadi elastic search ke views se ):^ hata denge to bhi sayad ye nhi hoga
     
         return () => clearTimeout(delayDebounceFn);
-      }, [input]);
+      }, [list.input]);
 
     const handleChange = (value) => {
-        setInput(value);
+        list.setInput(value);
        
         // fetchData(value);
     }
@@ -61,7 +57,7 @@ export default function Searchbar() {
                 id=""
                 name="liststudents"
                 placeholder="Search..."
-                value={input}
+                value={list.input}
                 onChange={(e) => handleChange(e.target.value)} />
         </div>
     )

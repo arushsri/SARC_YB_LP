@@ -15,16 +15,20 @@
     margin: 10px 0;
 }
 
-.optionSelected li button {
-    margin-right: 40px;
-    background-color: blueviolet;
-    border-radius: 20px;
-    padding: 7px 25px; 
+.deptHostel {
+    color: violet;
+    font-weight: 200;
 }
 
-.optionSelected li button:hover {
-    background-color: violet;
+.optionSelected li button {
+    margin-right: 40px;
+    background-color: red;
+    color: aliceblue;
 }
+
+/* .optionSelected li button:hover {
+    background-color: violet;
+} */
 
 .optionSelected li img {
    border-radius: 50%;

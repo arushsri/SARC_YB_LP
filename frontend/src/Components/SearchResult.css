@@ -3,7 +3,6 @@
     justify-content: space-between;
     align-items: center;
     gap: 60px;
-    /* border: 2px solid grey; */
     margin: 2px 0;
     border-radius: 30px;
     background-color: transparent;
@@ -12,13 +11,12 @@
     height: 100px;
 }
 
-@media screen and (max-width: 1240px) {
+@media screen and (max-width: 600px) {
     .SearchResult {
         font-size: 12px;
         padding: 5px 0;
-        /* gap: auto; */
         text-align: center;
-        /* max-width: 200px; */
+        margin: auto 20px;
     }
 }
 
@@ -29,15 +27,9 @@
 }
 
 .SearchResult button {
-    background-color: violet;
-    /* width: 10vw; */
-    height: 5vh;
-    padding: 2px 30px;
-    border-radius: 20px;
+    background-color: green;
 }
 
 .SearchResult button:hover{
     background-color: #865dff;
-    
-    /* padding: 5px; */
 }

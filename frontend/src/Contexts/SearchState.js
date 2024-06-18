@@ -4,7 +4,7 @@ import { useState } from 'react';
 const SearchState = (props) => {
     const [results, setResults] = useState([]);
     const [selected, setSelected] = useState([]);
-    const [selectedIds, setSelectedIds] = useState([]);
+    const [input, setInput] = useState("");
 
     const updateResults = (value) => {
         setResults(value);
@@ -14,7 +14,7 @@ const SearchState = (props) => {
     }
 
     return (
-        <SearchContext.Provider value={{results, selected, selectedIds, updateResults, updateSelected, setSelectedIds}}>
+        <SearchContext.Provider value={{results, selected, input, updateResults, updateSelected, setInput}}>
             {props.children}
         </SearchContext.Provider>
     )

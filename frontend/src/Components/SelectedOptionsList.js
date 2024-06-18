@@ -4,7 +4,7 @@ import SearchContext from '../Contexts/SearchContext'
 import './SelectedOptionsList.css'
 
 
-export default function SelectedOptionsList() {
+export default function SelectedOptionsList({ data, setData }) {
     const selectedList = useContext(SearchContext);
 
     return (
@@ -16,7 +16,8 @@ export default function SelectedOptionsList() {
                 
                 {selectedList.selected && selectedList.selected.map((element) => {
                     return (
-                        <SelectedOption option={element} key={element.id}/>
+                        <SelectedOption option={element} key={element.id} data={data}
+                        setData={setData}/>
                     )
                 })}
             </ul>
