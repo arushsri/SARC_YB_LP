@@ -1,0 +1,19 @@
+.searchTitle{
+    margin-bottom: 20px;
+}
+
+.searchTitle label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(155,82,227);
+}
+
+@media screen and (max-width: 1240px) {
+    .searchTitle {
+        width: 90vw;
+        margin: auto;
+        font-size: 10px;
+        
+    }
+}

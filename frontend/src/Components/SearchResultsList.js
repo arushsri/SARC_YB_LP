@@ -8,7 +8,7 @@ export default function SearchResultsList({ data, setData }) {
 
     return (
         <div className="form-input">
-        <label style={{backgroundColor: 'rgb(34,34,34)', height: '670px', overflow: 'hidden'}} >
+        <label style={{backgroundColor: 'rgb(34,34,34)', maxHeight: '670px', overflow: 'hidden'}} >
             {resultList.results.map((result) => {
                 return <SearchResult result={result} key={result.id} data={data} setData={setData}/>
             })}
