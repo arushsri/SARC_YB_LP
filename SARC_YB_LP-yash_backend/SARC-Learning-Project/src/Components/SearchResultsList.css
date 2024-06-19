@@ -1,0 +1,16 @@
+.SearchResultsList{
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: rgb(155,82,227);
+    background-color: rgb(34, 34, 34);
+}
+
+@media screen and (max-width: 1240px) {
+    .SearchResultsList {
+        width: 90vw;
+        margin: auto;
+        font-size: 10px;
+        
+    }
+}
