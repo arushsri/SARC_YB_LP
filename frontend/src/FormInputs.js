@@ -42,7 +42,7 @@ function FormInputs() {
     setSuccess(false);
 
     try {
-      const response = await axios.post('http://127.0.0.1:8000/api/formdata/', data);
+      const response = await axios.post('https://ybform.sarc-iitb.org/api/formdata/', data);
       console.log(response.data);
       setSuccess(true);
       setData({
