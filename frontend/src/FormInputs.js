@@ -65,7 +65,7 @@ function FormInputs() {
       selected.setDisplayName("");
      
     } catch (error) {
-      setError('Failed to submit the form. Please try again. ', error);
+      setError('Failed to submit the form. Please try again. '+ error);
     } finally {
       setLoading(false);
     }
