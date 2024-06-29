@@ -8,7 +8,7 @@ export default function NameResultsList({ data, setData }) {
 
     return (
         <div className="form-input">
-        <label style={{backgroundColor: 'rgb(34,34,34)', maxHeight: '670px', overflow: 'hidden'}} >
+        <label style={{backgroundColor: 'rgb(34,34,34)', maxHeight: '670px',overflowY: "scroll"}} >
             {resultList.nameResults.map((result) => {
                 return <NameResult result={result} key={result.id} data={data} setData={setData}/>
             })}
