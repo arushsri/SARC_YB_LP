@@ -67,7 +67,7 @@ function FormInputs() {
       selected.setDisplayName("");
      
     } catch (error) {
-      setError('Failed to submit the form. Please try again. '+ error);
+      setError('Failed to submit the form. Please try again. ');
     } finally {
       setLoading(false);
     }
@@ -140,10 +140,12 @@ function FormInputs() {
 
         </textarea>
       </div>
+    <div><p htmlFor='type of  copy' className='required'>Match your image in the full name section before submitting.</p></div>
+
       <button type='submit' className='submit-button' disabled={loading}>
         {loading ? 'Submitting...' : 'Submit'}
       </button>
-      {error && <div className='error-message'>{error}</div>}
+      {error && <div className='error-message'>{error}<p htmlFor='type of  copy' className='required'>Match your image in the full name section before submitting.</p><p htmlFor='type of  copy' className='required'>Also Confirm that the phone numbers(9876543210 - no prefix) and emails (akshat@sarciitb.org) are added in the correct format.</p></div>}
       {success && <div className='success-message'>Form submitted successfully!</div>}
     </form>
   );
