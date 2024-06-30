@@ -87,11 +87,11 @@ function FormInputs() {
         <input type='text' id='roll' name='roll' value={data.roll} placeholder='your roll no.' onChange={handleChange} required />
       </div>
       <div className='form-input'>
-        <label htmlFor='phone' className='required'>Mobile No.(Preferably WhatsApp)</label>
+        <label htmlFor='phone' className='required'>Mobile No.(Preferably WhatsApp) [don't include +91 , just enter in the following fashion : 9879879879]</label>
         <input type='phone' id='phone' name='phone' value={data.phone} placeholder='mobile number' onChange={handleChange} required />
       </div>
       <div className='form-input'>
-        <label htmlFor='alternateMobileNo' >Alternate Mobile No.</label>
+        <label htmlFor='alternateMobileNo' >Alternate Mobile No. [don't include +91 , just enter in the following fashion : 9879879879]</label>
         <input type='phone' id='alternateMobileNo' name='alternateMobileNo' value={data.alternateMobileNo} placeholder='Alternate mobile number' onChange={handleChange} />
       </div>
       <div className='form-input'>
