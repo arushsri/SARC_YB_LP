@@ -1,20 +1,20 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useContext, useEffect } from 'react'
 import axios from 'axios'
 import SearchContext from '../Contexts/SearchContext'
 import '../FormInputs.css'
 
 export default function NameSearch() {
-    const list = useContext(SearchContext);
+    const { name, setNameResults, setName, setDisplayName, displayName } = useContext(SearchContext);
 
     useEffect(() => {
         const delayDebounceFn = setTimeout(() => {
-          if (list.name) {
+          if (name) {
             axios
               .post('https://yearbook.sarc-iitb.org/api/search/search/', {
                 query: {
                   multi_match: {
                     fields: ['name', 'hostel', 'department', 'degree', 'program'],
-                    query: list.name,
+                    query: name,
                     fuzziness: 'AUTO',
                     type: 'best_fields',
                   },
@@ -30,36 +30,34 @@ export default function NameSearch() {
                   hostel: user.hostel,
                   is_ib: user.is_ib,
                 }));
-                list.setNameResults(mappedUsers);
+                setNameResults(mappedUsers);
               })
               .catch(error => {
                 console.error('Error searching users:', error);
               });
           } else {
-            list.setNameResults([]); // Clear users when search term is empty
+            setNameResults([]); // Clear users when search term is empty
           }
-        }, 200); //ye dal diya...isse hi ab constant 6 nhi dikha raha
-        //matlb yadi elastic search ke views se ):^ hata denge to bhi sayad ye nhi hoga
-    
+        }, 200);
+
         return () => clearTimeout(delayDebounceFn);
-      }, [list.name]);
+      }, [name, setNameResults]);
 
     const handleChange = (value) => {
-        list.setName(value);
-        list.setDisplayName(value);
-       
-        // fetchData(value);
+        setName(value);
+        setDisplayName(value);
     }
 
     return (
         <div className='form-input'>
             <input
                 type="text"
-                id=""
                 name="liststudents"
                 placeholder="Search your name"
-                value={list.displayName}
-                onChange={(e) => handleChange(e.target.value)} required/>
+                value={displayName}
+                onChange={(e) => handleChange(e.target.value)}
+                required
+            />
         </div>
     )
 }
