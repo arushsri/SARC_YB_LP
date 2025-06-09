@@ -21,7 +21,7 @@ function Form() {
       <div className='subhead'><h2>Hold your memories in your hand</h2></div>
       <div class="yearbook-preview">
             <p>To get more info about the physical YearBook</p>
-            <a href="https://docs.google.com/document/d/121Bk5j9D1-Yv8pKUt4_lVHSAsXQiauzvJVilbE02Kso/edit?usp=sharing" target="_blank">Click Here</a>
+            <a href="https://docs.google.com/document/d/121Bk5j9D1-Yv8pKUt4_lVHSAsXQiauzvJVilbE02Kso/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Click Here</a>
         </div>
       <FormInputs/>
     </div>
