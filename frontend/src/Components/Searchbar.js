@@ -4,7 +4,7 @@ import SearchContext from '../Contexts/SearchContext'
 import '../FormInputs.css'
 
 export default function Searchbar() {
-    const { input, updateResults } = useContext(SearchContext);
+    const { input, updateResults, setInput } = useContext(SearchContext);
 
     useEffect(() => {
       const delayDebounceFn = setTimeout(() => {
@@ -44,19 +44,16 @@ export default function Searchbar() {
 
 
     const handleChange = (value) => {
-        list.setInput(value);
-       
-        // fetchData(value);
+        setInput(value);
     }
 
     return (
         <div className='form-input'>
             <input
                 type="text"
-                id=""
                 name="liststudents"
                 placeholder="Search..."
-                value={list.input}
+                value={input}
                 onChange={(e) => handleChange(e.target.value)} />
         </div>
     )
