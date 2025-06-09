@@ -117,9 +117,9 @@ function FormInputs() {
       <div className='form-input'>
         <label htmlFor='type of  copy' className='required'>Type  of physical copy of Yearbook you would like to have</label>
         <select id='type of copy' name='typeofcopy' value={data.typeofcopy} onChange={handleChange} required>
-          <option value='complete'>Complete yearbook with your own profile along with all the graduating friends profiles you have written for</option>
+          <option value='complete'>Complete YearBook with your profile, profiles of friends you’ve written for, and those who’ve written for you</option>
           <option value='onlytheirown'>Only with your own profile</option>
-          <option value='customised'>customised yearbook with some specific graduating friends profile(select your friends list in next option)</option>
+          <option value='customised'>Customised YearBook with some specific friends' profiles (select your friends list in the next option)</option>
         </select>
       </div>
 
