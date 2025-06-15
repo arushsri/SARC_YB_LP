@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# Ignore environment and IDE settings
+.env
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# VSCode
+.vscode/
+
+# PyCharm
+.idea/
+
+# macOS and Windows system files
+.DS_Store
+Thumbs.db
+
+# Migrations (optional - remove if you want to track migrations)
+# **/migrations/
+
+# Node modules (if using any JS tooling)
+node_modules/
+
+# Output and build folders
+build/
+dist/
+*.egg-info/
+
+# Others
+*.bak
+*.swp
