@@ -142,12 +142,12 @@ function FormInputs() {
       </div>
     <div><p htmlFor='type of  copy' className='required'>Match your image in the full name section before submitting.</p></div>
 
-      {/* <button type='submit' className='submit-button' disabled={loading}>
-        {loading ? 'Submitting...' : 'Submit'}
-      </button> */}
-      <button type='submit' className='submit-button' disabled='true'>
+      <button type='submit' className='submit-button' disabled={loading}>
         {loading ? 'Submitting...' : 'Submit'}
       </button>
+      {/* <button type='submit' className='submit-button' disabled='true'>
+        {loading ? 'Submitting...' : 'Submit'}
+      </button> */}
       {error && <div className='error-message'>{error}<p htmlFor='type of  copy' className='required'>Match your image in the full name section before submitting.</p><p htmlFor='type of  copy' className='required'>Also confirm that the phone numbers (9876543210) has no prefix and the emails (person@iitb.ac.in and person@gmail.com) are added in the correct format.</p></div>}
       {success && <div className='success-message'>Form submitted successfully!</div>}
     </form>
